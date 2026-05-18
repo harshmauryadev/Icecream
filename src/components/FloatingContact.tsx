@@ -7,7 +7,7 @@ export default function FloatingContact() {
   const whatsappMessage = "Hello Daylily! I'd like to inquire about your ice creams.";
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4">
+    <div className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[100] flex flex-col gap-4">
       {/* Phone Button */}
       <a
         href={`tel:+${phoneNumber}`}

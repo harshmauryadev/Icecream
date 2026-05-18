@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import BottomNavigation from "@/components/BottomNavigation";
 
 export default function RootLayout({
   children,
@@ -43,10 +44,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${dancingScript.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col pb-20 md:pb-0">
         <Header />
         {children}
         <FloatingContact />
+        <BottomNavigation />
         <Footer />
       </body>
     </html>

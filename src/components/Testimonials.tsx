@@ -2,16 +2,19 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "Regular Customer",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
     quote: "A truly delightful experience! The textures are so creamy, and you can really taste the quality of the ingredients. The Roasted Pistachio is out of this world.",
   },
   {
     name: "Rajesh Gupta",
     role: "Food Blogger",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
     quote: "The best artisanal ice cream in the city. The balance of flavors is perfect—not too sweet, just incredibly rich and satisfying. A must-visit for every dessert lover.",
   },
   {
     name: "Ananya Desai",
     role: "Local Resident",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
     quote: "I love bringing my kids here. The atmosphere is so warm and welcoming, and I feel good knowing they're eating real, organic treats. The Mango Sorbet is our favorite!",
   },
 ];
@@ -39,9 +42,11 @@ export default function Testimonials() {
                 &quot;{t.quote}&quot;
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-secondary rounded-full flex items-center justify-center font-bold text-brand-brown">
-                  {t.name.charAt(0)}
-                </div>
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-primary/20 shadow-md"
+                />
                 <div>
                   <h4 className="font-display font-bold text-brand-brown">{t.name}</h4>
                   <p className="text-xs font-bold uppercase tracking-widest text-brand-primary mt-0.5">{t.role}</p>
